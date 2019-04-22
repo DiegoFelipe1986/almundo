@@ -1,0 +1,15 @@
+@import '~@angular/material/theming';
+
+.container {
+  margin: 16px;
+
+  .filters-side {
+    margin-bottom: 16px;
+  }
+
+  .hotels-side {
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,19 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex class="hotel-card">
+  <div fxFlex="30">
+    <img [src]="hotel.image" #hotelImage alt="Hotel picture">
+  </div>
+  <div fxFlex="40" class="hotel-details">
+    <h1 class="mat-title hotel-name">{{hotel.name}}</h1>
+    <mat-icon *ngFor="let star of numberOfStars(hotel.stars)" class="hotel-star">star</mat-icon>
+    <br>
+    <mat-icon *ngFor="let amenity of hotel.amenities" :svgIcon="{{amenity}}" class="hotel-amenity"></mat-icon>
+  </div>
+  <div fxFlex="30" fxLayout="column" fxLayoutAlign="space-around center" class="hotel-price">
+    <h4 class="mat-body-1">Precio por noche por habitación</h4>
+    <div class="center-text">
+      <h3 class="mat-headline">ARS</h3>
+      <h3 class="mat-display-1">{{hotel.price}}</h3>
+    </div>
+    <button mat-raised-button color="primary" class="button-lg">Ver Hotel</button>
+  </div>
+</div>

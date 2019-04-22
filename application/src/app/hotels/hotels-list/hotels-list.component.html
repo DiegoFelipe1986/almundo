@@ -1,0 +1,5 @@
+<app-hotel *ngFor="let hotel of hotels" [hotel]="hotel"></app-hotel>
+<!-- No hotels to display -->
+<div *ngIf="hotels.length === 0" class="no-hotels">
+  <h3 class="mat-body-1">Lo siento, no hay hoteles que coincidan con su filtro.</h3>
+</div>

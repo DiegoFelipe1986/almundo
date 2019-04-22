@@ -1,0 +1,45 @@
+{
+  "name": "almundo-server",
+  "version": "1.0.0",
+  "description": "API REST built with NodeJS",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch & nodemon dist",
+    "lint": "eslint src --ext ts",
+    "install-dep": "node scripts/install-dependencies.js",
+    "build-apps": "node scripts/build-applications.js",
+    "serve-app": "http-server ../application/dist/",
+    "serve-api": "node dist/index.js",
+    "serve": "concurrently 'npm run serve-app' 'npm run serve-api'",
+    "run-app": "npm run install-dep && npm run build-apps && npm run serve"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "node"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "http-server": "^0.11.1",
+    "lowdb": "^1.0.0",
+    "nodemon": "^1.17.3",
+    "rxjs": "^6.4.0",
+    "shortid": "^2.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "7.0.22",
+    "eslint": "4.0.0",
+    "eslint-config-airbnb-base": "11.2.0",
+    "eslint-plugin-import": "2.3.0",
+    "eslint-plugin-promise": "3.5.0",
+    "supertest": "3.0.0",
+    "tsc": "1.20150623.0",
+    "typescript": "^2.4.2",
+    "typescript-eslint-parser": "3.0.0"
+  }
+}
